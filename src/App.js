@@ -15,7 +15,6 @@ function App() {
           <Route path="/newpost" element={<NewPost />} />
         </Routes>
       </BrowserRouter>
-      {/* <Postview /> */}
     </div>
   );
 }

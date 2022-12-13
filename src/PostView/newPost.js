@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Form, Row } from "react-bootstrap";
+import { Alert, Badge, Button, Card, Col, Form, Row } from "react-bootstrap";
 import Navigation from "../components/Navigation";
 
 const NewPost = () => {
@@ -13,7 +13,29 @@ const NewPost = () => {
               <Form>
                 <Row className="mb-3">
                   <Col>
-                    <Form.Control type="file" placeholder="No file choosen" />
+                    <Form.Group as={Row} className="align-items-center">
+                      <Col sm="10" className="pe-0">
+                        <Form.Control
+                          type="file"
+                          id="post"
+                          name="post"
+                          className="d-none"
+                        />
+                        <Form.Label
+                          column
+                          sm="12"
+                          className="browse-text "
+                          htmlFor="post"
+                        >
+                          No file chosen
+                        </Form.Label>
+                      </Col>
+                      <Form.Label column sm="2" className="ps-0" htmlFor="post">
+                        <Alert variant="secondary" className="browse mb-0">
+                          Browse
+                        </Alert>
+                      </Form.Label>
+                    </Form.Group>
                   </Col>
                 </Row>
                 <Row className="mb-3">
